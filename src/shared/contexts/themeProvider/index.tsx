@@ -9,6 +9,24 @@ const theme = createTheme({
       primary: "#fff",
     },
   },
+  typography: {
+    fontFamily: "segoe UI",
+  },
+  components: {
+    MuiSvgIcon: {
+      defaultProps: {
+        fontSize: "large",
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "#000",
+          borderRight: "1px solid #2b2b2b",
+        },
+      },
+    },
+  },
 });
 
 interface Props {

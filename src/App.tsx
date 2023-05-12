@@ -1,11 +1,12 @@
-import { Sidebar } from "react-pro-sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import CustomThemeProvider from "./shared/contexts/themeProvider";
 
 const App: React.FC = () => {
   return (
     <CustomThemeProvider>
+
       <Sidebar />
-      <div>Hi</div>
+
     </CustomThemeProvider>
   );
 };
