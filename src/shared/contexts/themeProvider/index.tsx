@@ -23,6 +23,7 @@ const theme = createTheme({
         paper: {
           backgroundColor: "#000",
           borderRight: "1px solid #2b2b2b",
+          padding: "8px 12px 20px 12px",
         },
       },
     },
