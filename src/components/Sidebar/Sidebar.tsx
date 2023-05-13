@@ -5,7 +5,6 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
-  Typography,
   Avatar,
   useMediaQuery,
   useTheme,

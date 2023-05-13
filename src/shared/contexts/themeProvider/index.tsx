@@ -27,6 +27,29 @@ const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#000",
+        },
+      },
+    },
+    MuiCardMedia: {
+      styleOverrides: {
+        // root: { height: "auto" },
+        img: {
+          width: "100%",
+          objectFit: "contain",
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          color: "#fff",
+        },
+      },
+    },
   },
 });
 
