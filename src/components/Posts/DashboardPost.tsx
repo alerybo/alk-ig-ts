@@ -25,11 +25,16 @@ function DashboardPost() {
       <CardHeader
         avatar={<Avatar />}
         action={
-          <IconButton aria-label="settings">
+          <IconButton aria-label="options">
             <MoreHoriz />
           </IconButton>
         }
-        title="kjbdfsdkjsf"
+        title={
+          <Link underline="none" variant="h6">
+            cgfdfgdg
+          </Link>
+        }
+        disableTypography={true}
       ></CardHeader>
       <CardMedia
         component="img"
@@ -53,18 +58,24 @@ function DashboardPost() {
         </Box>
       </CardActions>
       <CardContent>
-        <Link component="button" underline="none" color="white">
+        <Link component="button" underline="none" variant="h6">
           Liczba polubień: 4875
         </Link>
-        <Box display="flex">
-          <Link component="button" underline="none" color="white">
+        <Box display="flex" gap={1}>
+          <Link component="button" underline="none" variant="h6">
             dfgdfgdsfg
           </Link>
-          <Typography>dsfsfjskfjbskfjbskfjbd ...</Typography>
+          <Typography variant="body1">dsfsfjskfjbskfjbskfjbd ...</Typography>
         </Box>
-        <Link component="button" underline="none" color="white">
+        <Link
+          component="button"
+          underline="none"
+          variant="body1"
+          color="#b7b7b7"
+        >
           więcej
         </Link>
+        <br />
         Comments
       </CardContent>
       <Divider />

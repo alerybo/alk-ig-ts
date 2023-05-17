@@ -7,10 +7,14 @@ const theme = createTheme({
     },
     text: {
       primary: "#fff",
+      secondary: "#b7b7b7",
     },
   },
   typography: {
     fontFamily: "segoe UI",
+    h6: {
+      fontSize: "16px",
+    },
   },
   components: {
     MuiSvgIcon: {
@@ -36,7 +40,6 @@ const theme = createTheme({
     },
     MuiCardMedia: {
       styleOverrides: {
-        // root: { height: "auto" },
         img: {
           width: "100%",
           objectFit: "contain",
@@ -44,6 +47,13 @@ const theme = createTheme({
       },
     },
     MuiIconButton: {
+      styleOverrides: {
+        root: {
+          color: "#fff",
+        },
+      },
+    },
+    MuiLink: {
       styleOverrides: {
         root: {
           color: "#fff",
