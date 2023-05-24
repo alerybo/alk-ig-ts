@@ -3,14 +3,14 @@ import Reels from "../components/Reels/Reels";
 
 const Dashboard: React.FC = () => {
   return (
-    <section
-      style={{ marginLeft: "320px", display: "flex", justifyContent: "center" }}
+    <div
+    // sx={{
+    //   marginLeft: { sm: "320px" },
+    // }}
     >
-      <div>
-        <Reels />
-        <Posts />
-      </div>
-    </section>
+      {/* <Reels /> */}
+      <Posts />
+    </div>
   );
 };
 

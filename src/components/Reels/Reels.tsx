@@ -11,8 +11,8 @@ function Reels() {
       <ReelIcon />
       <ReelIcon />
       <ReelIcon />
-      <ReelIcon />
-      <ReelIcon />
+      {/* <ReelIcon />
+      <ReelIcon /> */}
     </Box>
   );
 }

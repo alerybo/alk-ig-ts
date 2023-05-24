@@ -18,6 +18,7 @@ import {
   MapsUgcRounded,
   BookmarkBorderOutlined,
 } from "@mui/icons-material";
+import Comments from "../Comments/Comments";
 
 function DashboardPost() {
   return (
@@ -75,8 +76,7 @@ function DashboardPost() {
         >
           więcej
         </Link>
-        <br />
-        Comments
+        <Comments />
       </CardContent>
       <Divider />
     </Card>

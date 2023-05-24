@@ -40,8 +40,7 @@ const links: Link[] = [
 
 const Sidebar: React.FC = () => {
   const theme = useTheme();
-  // const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  // const mediumScreen = useMediaQuery(theme.breakpoints.between("sm", "xl"));
+  
   const largeScreen = useMediaQuery(theme.breakpoints.up("xl"));
 
   return (
