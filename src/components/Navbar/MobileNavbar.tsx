@@ -2,13 +2,10 @@ import { Box, AppBar, Toolbar, IconButton, Avatar } from "@mui/material";
 import {
   ExploreOutlined,
   FavoriteBorderOutlined,
-  Search,
   AddBoxOutlined,
   MovieOutlined,
   HomeOutlined,
   SendOutlined,
-  Menu,
-  Instagram,
 } from "@mui/icons-material";
 import SearchBar from "./SearchBar";
 import logo from "../../assets/logo.png";
