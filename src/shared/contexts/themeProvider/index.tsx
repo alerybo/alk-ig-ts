@@ -46,13 +46,13 @@ const theme = createTheme({
         },
       },
     },
-    MuiIconButton: {
-      styleOverrides: {
-        root: {
-          color: "#fff",
-        },
-      },
-    },
+    // MuiIconButton: {
+    //   styleOverrides: {
+    //     root: {
+    //       color: "#fff",
+    //     },
+    //   },
+    // },
     MuiLink: {
       styleOverrides: {
         root: {
@@ -65,6 +65,7 @@ const theme = createTheme({
         root: {
           backgroundColor: "#000",
           borderBottom: "1px solid #2b2b2b",
+          borderTop: "1px solid #2b2b2b",
         },
       },
     },

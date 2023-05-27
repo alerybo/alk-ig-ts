@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import {
   Drawer,
   List,
@@ -25,22 +26,27 @@ import logo from "../../assets/logo.png";
 interface Link {
   name: string;
   icon: JSX.Element;
+  route: string;
 }
 
 const links: Link[] = [
-  { name: "Strona główna", icon: <HomeOutlined /> },
-  { name: "Szukaj", icon: <Search /> },
-  { name: "Eksploruj", icon: <ExploreOutlined /> },
-  { name: "Rolki", icon: <MovieOutlined /> },
-  { name: "Wiadomości", icon: <SendOutlined /> },
-  { name: "Powiadomienia", icon: <FavoriteBorderOutlined /> },
-  { name: "Utwórz", icon: <AddBoxOutlined /> },
-  { name: "Profil", icon: <Avatar sx={{ width: 35, height: 35 }} /> },
+  { name: "Strona główna", icon: <HomeOutlined />, route: "/" },
+  { name: "Szukaj", icon: <Search />, route: "/" },
+  { name: "Eksploruj", icon: <ExploreOutlined />, route: "explore" },
+  { name: "Rolki", icon: <MovieOutlined />, route: "/" },
+  { name: "Wiadomości", icon: <SendOutlined />, route: "/" },
+  { name: "Powiadomienia", icon: <FavoriteBorderOutlined />, route: "/" },
+  { name: "Utwórz", icon: <AddBoxOutlined />, route: "/" },
+  {
+    name: "Profil",
+    icon: <Avatar sx={{ width: 35, height: 35 }} />,
+    route: "/",
+  },
 ];
 
 const Sidebar: React.FC = () => {
   const theme = useTheme();
-  
+
   const largeScreen = useMediaQuery(theme.breakpoints.up("xl"));
 
   return (
@@ -53,7 +59,13 @@ const Sidebar: React.FC = () => {
       </Toolbar>
       <List>
         {links.map((link) => (
-          <ListItem key={link.name} disablePadding>
+          <ListItem
+            key={link.name}
+            component={Link}
+            to={link.route}
+            style={{ color: "white" }}
+            disablePadding
+          >
             <ListItemButton
               sx={{
                 p: "16px",
