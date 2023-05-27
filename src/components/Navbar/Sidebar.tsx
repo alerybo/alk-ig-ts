@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Drawer,
   List,
@@ -46,7 +46,6 @@ const links: Link[] = [
 
 const Sidebar: React.FC = () => {
   const theme = useTheme();
-
   const largeScreen = useMediaQuery(theme.breakpoints.up("xl"));
 
   return (
@@ -55,7 +54,9 @@ const Sidebar: React.FC = () => {
       PaperProps={{ sx: { width: `${largeScreen ? "320px" : "auto"}` } }}
     >
       <Toolbar sx={{ padding: "16px" }} disableGutters>
-        {largeScreen ? <img src={logo} /> : <Instagram />}
+        <Link to={"/"} style={{ color: "white" }}>
+          {largeScreen ? <img src={logo} /> : <Instagram />}
+        </Link>
       </Toolbar>
       <List>
         {links.map((link) => (

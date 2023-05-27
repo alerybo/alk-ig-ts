@@ -46,13 +46,13 @@ const theme = createTheme({
         },
       },
     },
-    // MuiIconButton: {
-    //   styleOverrides: {
-    //     root: {
-    //       color: "#fff",
-    //     },
-    //   },
-    // },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          color: "#fff",
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {
