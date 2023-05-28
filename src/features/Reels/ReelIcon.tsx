@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
 const StyledAvatar = styled(Avatar)({
-  width: "65px",
-  height: "65px",
+  width: "45px",
+  height: "45px",
   marginRight: "20px",
 });
 
@@ -12,7 +12,7 @@ const ReelIcon: React.FC = () => {
   return (
     <Box>
       <StyledAvatar />
-      <p>username</p>
+      <p style={{ fontSize: "12px" }}>username</p>
     </Box>
   );
 };

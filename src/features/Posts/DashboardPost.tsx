@@ -25,7 +25,7 @@ interface Props {
 
 const DashboardPost: React.FC<Props> = ({ name, image, location }) => {
   return (
-    <Card>
+    <Card sx={{ maxWidth: "500px" }}>
       <CardHeader
         avatar={<Avatar />}
         action={

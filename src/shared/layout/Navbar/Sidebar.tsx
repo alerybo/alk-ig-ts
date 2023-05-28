@@ -28,7 +28,7 @@ interface Link {
 const StyledAvatar = styled(Avatar)({ width: 35, height: 35 });
 
 const StyledListItemButton = styled(ListItemButton)({
-  padding: "16px",
+  padding: "8px",
   borderRadius: 5,
   "&:hover": { backgroundColor: "#1b1b1b" },
 });
@@ -77,7 +77,6 @@ const Sidebar: React.FC = () => {
                 <ListItemText
                   primary={link.name}
                   primaryTypographyProps={{
-                    fontSize: "21px",
                     m: "2px 0",
                     pl: "20px",
                   }}
@@ -95,7 +94,6 @@ const Sidebar: React.FC = () => {
               <ListItemText
                 primary="Więcej"
                 primaryTypographyProps={{
-                  fontSize: "22px",
                   m: "2px 0",
                   pl: "20px",
                 }}
