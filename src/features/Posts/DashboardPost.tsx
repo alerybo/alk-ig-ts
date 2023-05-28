@@ -21,12 +21,14 @@ import {
 import Comments from "../Comments/Comments";
 
 interface Props {
-  id: number;
-  title: string;
-  body: string;
+  name: number;
+  image: string;
+  location: {
+    name: string;
+  };
 }
 
-const DashboardPost: React.FC<Props> = ({ id, title, body }) => {
+const DashboardPost: React.FC<Props> = ({ name, image, location }) => {
   return (
     <Card sx={{ maxWidth: "560px" }}>
       <CardHeader
@@ -38,16 +40,12 @@ const DashboardPost: React.FC<Props> = ({ id, title, body }) => {
         }
         title={
           <Link underline="none" variant="h6">
-            username
+            {name}
           </Link>
         }
         disableTypography={true}
       ></CardHeader>
-      <CardMedia
-        component="img"
-        image={`https://picsum.photos/500/700?random=${id}`}
-        alt="post"
-      />
+      <CardMedia component="img" image={image} alt="post" />
       <CardActions>
         <IconButton aria-label="like">
           <FavoriteBorderOutlined />
@@ -70,9 +68,9 @@ const DashboardPost: React.FC<Props> = ({ id, title, body }) => {
         </Link>
         <Box display="flex" gap={1}>
           <Link component="button" underline="none" variant="h6">
-            dfgdfgdsfg
+            {name}
           </Link>
-          <Typography variant="body1">{body}</Typography>
+          <Typography variant="body1">{location.name}</Typography>
         </Box>
         <Link
           component="button"
