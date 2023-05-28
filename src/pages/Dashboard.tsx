@@ -4,7 +4,7 @@ import Reels from "../features/Reels/Reels";
 const Dashboard: React.FC = () => {
   return (
     <div>
-      {/* <Reels /> */}
+      <Reels />
       <DashboardPosts />
     </div>
   );

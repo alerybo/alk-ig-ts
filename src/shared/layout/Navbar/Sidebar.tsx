@@ -1,26 +1,22 @@
 import { Link } from "react-router-dom";
-import {
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Toolbar,
-  Avatar,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import {
-  ExploreOutlined,
-  FavoriteBorderOutlined,
-  Search,
-  AddBoxOutlined,
-  MovieOutlined,
-  HomeOutlined,
-  SendOutlined,
-  Menu,
-  Instagram,
-} from "@mui/icons-material";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Toolbar from "@mui/material/Toolbar";
+import Avatar from "@mui/material/Avatar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme, styled } from "@mui/material/styles";
+import ExploreOutlined from "@mui/icons-material/ExploreOutlined";
+import FavoriteBorderOutlined from "@mui/icons-material/FavoriteBorderOutlined";
+import Search from "@mui/icons-material/Search";
+import AddBoxOutlined from "@mui/icons-material/AddBoxOutlined";
+import MovieOutlined from "@mui/icons-material/MovieOutlined";
+import HomeOutlined from "@mui/icons-material/HomeOutlined";
+import SendOutlined from "@mui/icons-material/SendOutlined";
+import Menu from "@mui/icons-material/Menu";
+import Instagram from "@mui/icons-material/Instagram";
 import logo from "../../../assets/logo.png";
 
 interface Link {
@@ -28,6 +24,14 @@ interface Link {
   icon: JSX.Element;
   route: string;
 }
+
+const StyledAvatar = styled(Avatar)({ width: 35, height: 35 });
+
+const StyledListItemButton = styled(ListItemButton)({
+  padding: "16px",
+  borderRadius: 5,
+  "&:hover": { backgroundColor: "#1b1b1b" },
+});
 
 const links: Link[] = [
   { name: "Strona główna", icon: <HomeOutlined />, route: "/" },
@@ -39,7 +43,7 @@ const links: Link[] = [
   { name: "Utwórz", icon: <AddBoxOutlined />, route: "/" },
   {
     name: "Profil",
-    icon: <Avatar sx={{ width: 35, height: 35 }} />,
+    icon: <StyledAvatar />,
     route: "/",
   },
 ];
@@ -67,13 +71,7 @@ const Sidebar: React.FC = () => {
             style={{ color: "white" }}
             disablePadding
           >
-            <ListItemButton
-              sx={{
-                p: "16px",
-                borderRadius: 5,
-                "&:hover": { backgroundColor: "#1b1b1b" },
-              }}
-            >
+            <StyledListItemButton>
               {link.icon}
               {largeScreen && (
                 <ListItemText
@@ -85,19 +83,13 @@ const Sidebar: React.FC = () => {
                   }}
                 />
               )}
-            </ListItemButton>
+            </StyledListItemButton>
           </ListItem>
         ))}
       </List>
       <List style={{ marginTop: `auto` }}>
         <ListItem disablePadding>
-          <ListItemButton
-            sx={{
-              p: "15px",
-              borderRadius: 5,
-              "&:hover": { backgroundColor: "#1b1b1b" },
-            }}
-          >
+          <StyledListItemButton>
             <Menu />
             {largeScreen && (
               <ListItemText
@@ -109,7 +101,7 @@ const Sidebar: React.FC = () => {
                 }}
               />
             )}
-          </ListItemButton>
+          </StyledListItemButton>
         </ListItem>
       </List>
     </Drawer>

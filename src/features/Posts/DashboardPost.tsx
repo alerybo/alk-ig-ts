@@ -1,25 +1,20 @@
-import {
-  Card,
-  CardHeader,
-  Avatar,
-  IconButton,
-  CardMedia,
-  CardActions,
-  CardContent,
-  Box,
-  Link,
-  Typography,
-  Divider,
-} from "@mui/material";
-import {
-  MoreHoriz,
-  FavoriteBorderOutlined,
-  SendOutlined,
-  MapsUgcRounded,
-  BookmarkBorderOutlined,
-} from "@mui/icons-material";
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import Avatar from "@mui/material/Avatar";
+import IconButton from "@mui/material/IconButton";
+import CardMedia from "@mui/material/CardMedia";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import MoreHoriz from "@mui/icons-material/MoreHoriz";
+import FavoriteBorderOutlined from "@mui/icons-material/FavoriteBorderOutlined";
+import SendOutlined from "@mui/icons-material/SendOutlined";
+import MapsUgcRounded from "@mui/icons-material/MapsUgcRounded";
+import BookmarkBorderOutlined from "@mui/icons-material/BookmarkBorderOutlined";
 import Comments from "../Comments/Comments";
-
 interface Props {
   name: number;
   image: string;
@@ -30,7 +25,7 @@ interface Props {
 
 const DashboardPost: React.FC<Props> = ({ name, image, location }) => {
   return (
-    <Card sx={{ maxWidth: "560px" }}>
+    <Card>
       <CardHeader
         avatar={<Avatar />}
         action={
@@ -56,7 +51,7 @@ const DashboardPost: React.FC<Props> = ({ name, image, location }) => {
         <IconButton aria-label="share">
           <SendOutlined />
         </IconButton>
-        <Box sx={{ marginLeft: "auto" }}>
+        <Box ml={"auto"}>
           <IconButton aria-label="save">
             <BookmarkBorderOutlined />
           </IconButton>
@@ -72,14 +67,6 @@ const DashboardPost: React.FC<Props> = ({ name, image, location }) => {
           </Link>
           <Typography variant="body1">{location.name}</Typography>
         </Box>
-        <Link
-          component="button"
-          underline="none"
-          variant="body1"
-          color="#b7b7b7"
-        >
-          więcej
-        </Link>
         <Comments />
       </CardContent>
       <Divider />

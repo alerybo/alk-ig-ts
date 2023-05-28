@@ -1,26 +1,29 @@
 import Sidebar from "./Navbar/Sidebar";
 import MobileNavbar from "./Navbar/MobileNavbar";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme, styled } from "@mui/material/styles";
 import { Outlet } from "react-router-dom";
 
-function Layout() {
+const StyledBox = styled(Box)({
+  marginTop: "60px",
+  display: "flex",
+  justifyContent: "center",
+});
+
+const Layout: React.FC = () => {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const largeScreen = useMediaQuery(theme.breakpoints.up("xl"));
+
   return (
     <>
       {smallScreen ? <MobileNavbar /> : <Sidebar />}
-      <Box
-        sx={{
-          marginLeft: smallScreen ? 0 : largeScreen ? "320px" : "90px",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <StyledBox ml={smallScreen ? 0 : largeScreen ? "320px" : "90px"}>
         <Outlet />
-      </Box>
+      </StyledBox>
     </>
   );
-}
+};
 
 export default Layout;

@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { Box, AppBar, Toolbar, IconButton, Avatar } from "@mui/material";
-import {
-  ExploreOutlined,
-  FavoriteBorderOutlined,
-  AddBoxOutlined,
-  MovieOutlined,
-  HomeOutlined,
-  SendOutlined,
-} from "@mui/icons-material";
+import ExploreOutlined from "@mui/icons-material/ExploreOutlined";
+import FavoriteBorderOutlined from "@mui/icons-material/FavoriteBorderOutlined";
+import AddBoxOutlined from "@mui/icons-material/AddBoxOutlined";
+import MovieOutlined from "@mui/icons-material/MovieOutlined";
+import HomeOutlined from "@mui/icons-material/HomeOutlined";
+import SendOutlined from "@mui/icons-material/SendOutlined";
 import SearchBar from "./SearchBar";
+import { styled } from "@mui/material/styles";
 import logo from "../../../assets/logo.png";
 
 interface Link {
@@ -30,6 +29,12 @@ const links: Link[] = [
   },
 ];
 
+const StyledToolbar = styled(Toolbar)({
+  flexGrow: 1,
+  display: "flex",
+  justifyContent: "space-around",
+});
+
 const MobileNavbar: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -49,9 +54,7 @@ const MobileNavbar: React.FC = () => {
         </Toolbar>
       </AppBar>
       <AppBar position="fixed" sx={{ top: "auto", bottom: 0 }}>
-        <Toolbar
-          sx={{ flexGrow: 1, display: "flex", justifyContent: "space-around" }}
-        >
+        <StyledToolbar>
           {links.map((link) => (
             <IconButton
               key={link.name}
@@ -62,7 +65,7 @@ const MobileNavbar: React.FC = () => {
               {link.icon}
             </IconButton>
           ))}
-        </Toolbar>
+        </StyledToolbar>
       </AppBar>
     </Box>
   );
