@@ -1,5 +1,5 @@
-import Sidebar from "../../components/Navbar/Sidebar";
-import MobileNavbar from "../../components/Navbar/MobileNavbar";
+import Sidebar from "./Navbar/Sidebar";
+import MobileNavbar from "./Navbar/MobileNavbar";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { Outlet } from "react-router-dom";
 

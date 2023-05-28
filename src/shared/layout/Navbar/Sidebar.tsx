@@ -21,7 +21,7 @@ import {
   Menu,
   Instagram,
 } from "@mui/icons-material";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 
 interface Link {
   name: string;

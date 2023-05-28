@@ -1,5 +1,5 @@
-import Posts from "../components/Posts/DashboardPosts";
-import Reels from "../components/Reels/Reels";
+import DashboardPosts from "../features/Posts/DashboardPosts";
+import Reels from "../features/Reels/Reels";
 
 const Dashboard: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Dashboard: React.FC = () => {
     // }}
     >
       {/* <Reels /> */}
-      <Posts />
+      <DashboardPosts />
     </div>
   );
 };

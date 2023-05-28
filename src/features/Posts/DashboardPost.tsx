@@ -20,7 +20,13 @@ import {
 } from "@mui/icons-material";
 import Comments from "../Comments/Comments";
 
-function DashboardPost() {
+interface Props {
+  id: number;
+  title: string;
+  body: string;
+}
+
+const DashboardPost: React.FC<Props> = ({ id, title, body }) => {
   return (
     <Card sx={{ maxWidth: "560px" }}>
       <CardHeader
@@ -32,15 +38,15 @@ function DashboardPost() {
         }
         title={
           <Link underline="none" variant="h6">
-            cgfdfgdg
+            username
           </Link>
         }
         disableTypography={true}
       ></CardHeader>
       <CardMedia
         component="img"
-        image="https://picsum.photos/500/700?random=1"
-        alt="Paella dish"
+        image={`https://picsum.photos/500/700?random=${id}`}
+        alt="post"
       />
       <CardActions>
         <IconButton aria-label="like">
@@ -66,7 +72,7 @@ function DashboardPost() {
           <Link component="button" underline="none" variant="h6">
             dfgdfgdsfg
           </Link>
-          <Typography variant="body1">dsfsfjskfjbskfjbskfjbd ...</Typography>
+          <Typography variant="body1">{body}</Typography>
         </Box>
         <Link
           component="button"
@@ -81,6 +87,6 @@ function DashboardPost() {
       <Divider />
     </Card>
   );
-}
+};
 
 export default DashboardPost;

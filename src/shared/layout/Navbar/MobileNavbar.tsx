@@ -9,7 +9,7 @@ import {
   SendOutlined,
 } from "@mui/icons-material";
 import SearchBar from "./SearchBar";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 
 interface Link {
   name: string;
