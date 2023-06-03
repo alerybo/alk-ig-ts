@@ -1,4 +1,4 @@
-import { useInfiniteQuery } from "react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 
 export type Post = {
   id: number;
@@ -31,7 +31,7 @@ async function getData({ pageParam = 1 }) {
 }
 
 export const usePostsQuery = () => {
-  const query = useInfiniteQuery<Page, Error>("posts", getData, {
+  const query = useInfiniteQuery<Page, Error>(["posts"], getData, {
     getNextPageParam: (lastPage) => lastPage.next,
   });
   return query;

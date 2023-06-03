@@ -18,35 +18,14 @@ import SendOutlined from "@mui/icons-material/SendOutlined";
 import Menu from "@mui/icons-material/Menu";
 import Instagram from "@mui/icons-material/Instagram";
 import logo from "../../../assets/logo.png";
-
-interface Link {
-  name: string;
-  icon: JSX.Element;
-  route: string;
-}
-
-const StyledAvatar = styled(Avatar)({ width: 35, height: 35 });
+import { SIDEBAR_LINKS } from "../../../constants";
+import { StyledAvatar } from "../../../constants";
 
 const StyledListItemButton = styled(ListItemButton)({
   padding: "8px",
   borderRadius: 5,
   "&:hover": { backgroundColor: "#1b1b1b" },
 });
-
-const links: Link[] = [
-  { name: "Strona główna", icon: <HomeOutlined />, route: "/" },
-  { name: "Szukaj", icon: <Search />, route: "/" },
-  { name: "Eksploruj", icon: <ExploreOutlined />, route: "explore" },
-  { name: "Rolki", icon: <MovieOutlined />, route: "/" },
-  { name: "Wiadomości", icon: <SendOutlined />, route: "/" },
-  { name: "Powiadomienia", icon: <FavoriteBorderOutlined />, route: "/" },
-  { name: "Utwórz", icon: <AddBoxOutlined />, route: "/" },
-  {
-    name: "Profil",
-    icon: <StyledAvatar />,
-    route: "/",
-  },
-];
 
 const Sidebar: React.FC = () => {
   const theme = useTheme();
@@ -63,7 +42,7 @@ const Sidebar: React.FC = () => {
         </Link>
       </Toolbar>
       <List>
-        {links.map((link) => (
+        {SIDEBAR_LINKS.map((link) => (
           <ListItem
             key={link.name}
             component={Link}

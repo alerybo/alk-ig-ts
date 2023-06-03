@@ -9,7 +9,8 @@ import SendOutlined from "@mui/icons-material/SendOutlined";
 import SearchBar from "./SearchBar";
 import { styled } from "@mui/material/styles";
 import logo from "../../../assets/logo.png";
-
+import { MOBILE_NAVBAR_LINKS } from "../../../constants";
+import { StyledAvatar } from "../../../constants";
 interface Link {
   name: string;
   icon: JSX.Element;
@@ -55,7 +56,7 @@ const MobileNavbar: React.FC = () => {
       </AppBar>
       <AppBar position="fixed" sx={{ top: "auto", bottom: 0 }}>
         <StyledToolbar>
-          {links.map((link) => (
+          {MOBILE_NAVBAR_LINKS.map((link) => (
             <IconButton
               key={link.name}
               component={Link}

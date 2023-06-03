@@ -16,7 +16,7 @@ const DashboardPosts: React.FC = () => {
     return <div>No posts found!</div>;
   }
 
-  const dataLength = data.pages.reduce((counter, page) => {
+  const dataLength: number = data.pages.reduce((counter, page) => {
     return counter + page.results.length;
   }, 0);
 
