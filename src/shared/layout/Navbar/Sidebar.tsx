@@ -5,21 +5,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
-import Avatar from "@mui/material/Avatar";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme, styled } from "@mui/material/styles";
-import ExploreOutlined from "@mui/icons-material/ExploreOutlined";
-import FavoriteBorderOutlined from "@mui/icons-material/FavoriteBorderOutlined";
-import Search from "@mui/icons-material/Search";
-import AddBoxOutlined from "@mui/icons-material/AddBoxOutlined";
-import MovieOutlined from "@mui/icons-material/MovieOutlined";
-import HomeOutlined from "@mui/icons-material/HomeOutlined";
-import SendOutlined from "@mui/icons-material/SendOutlined";
 import Menu from "@mui/icons-material/Menu";
 import Instagram from "@mui/icons-material/Instagram";
 import logo from "../../../assets/logo.png";
 import { SIDEBAR_LINKS } from "../../../constants";
-import { StyledAvatar } from "../../../constants";
 
 const StyledListItemButton = styled(ListItemButton)({
   padding: "8px",
